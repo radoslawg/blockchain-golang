@@ -1,0 +1,10 @@
+{
+  "name": "SDL2 in GoLang",
+  "dockerFile": "Dockerfile",
+
+  "features": {
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": []
+  },
+
+  "postCreateCommand": "bash ./setup_env.sh"
+}
