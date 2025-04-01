@@ -3,6 +3,8 @@
 export XDG_CONFIG_HOME="$HOME"/.config
 mkdir -p "$XDG_CONFIG_HOME"
 
+printf "\ncd $PWD\n" >> ~/.zshrc
+
 ln -sf "$PWD/.config/nvim" "$XDG_CONFIG_HOME"/nvim
 
 packages=(
