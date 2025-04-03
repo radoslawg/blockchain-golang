@@ -136,6 +136,10 @@
 --             end,
 --           })
 --         end
+         if client and client_supports_method(client, 'textDocument/completion') then
+           vim.lsp.completion.enable(true, client.id, event.buf, {autotrigger = true })
+         end
+
 
           -- The following code creates a keymap to toggle inlay hints in your
           -- code, if the language server you are using supports them
@@ -163,7 +167,7 @@
             [vim.diagnostic.severity.HINT] = '󰌶 ',
           },
         } or {},
-        virtual_text = {
+        virtual_lines = {
           source = 'if_many',
           spacing = 2,
           format = function(diagnostic)
