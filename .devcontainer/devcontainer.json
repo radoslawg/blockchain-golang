@@ -6,5 +6,5 @@
     "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": []
   },
 
-  "postCreateCommand": "bash ./setup_env.sh"
+  "postCreateCommand": "bash ./.config/setup_env.sh"
 }
